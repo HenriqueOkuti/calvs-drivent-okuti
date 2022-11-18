@@ -10,3 +10,7 @@ export const postPaymentSchema = Joi.object({
     cvv: Joi.number().required(),
   }).required(),
 });
+
+export const getPaymentSchema = Joi.object({
+  ticketId: Joi.number().required(),
+});
