@@ -44,22 +44,24 @@ describe("GET /hotels", () => {
     it("should respond with status 200 and with disponible hotels", async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
-      await createHotel(); //Create two hotels
-      await createHotel(); //for array verification
-      const insertedHotelList = await getHotelList();
+      const hotel = await createHotel();
+
+      await createHotelRoomInfo(hotel.id);
+      await createHotelRoomInfo(hotel.id);
 
       const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
 
+      const HotelRoomsInfo = await getHotelRoomInfo(hotel.id);
+
       expect(response.status).toEqual(httpStatus.OK);
-      expect(response.body).toEqual(
-        insertedHotelList.map((hotel) => {
-          return {
-            ...hotel,
-            createdAt: expect.any(String),
-            updatedAt: expect.any(String),
-          };
-        }),
-      );
+      expect(response.body).toEqual([
+        {
+          ...hotel,
+          createdAt: expect.any(String),
+          updatedAt: expect.any(String),
+          totalCapacity: HotelRoomsInfo.reduce((prev, curr) => prev + curr.capacity, 0),
+        },
+      ]);
     });
   });
 });
@@ -93,17 +95,8 @@ describe("GET /hotels?hotelId", () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       await createHotel();
-      const insertedHotelList = await getHotelList();
-      const hotelList = insertedHotelList.map((hotel) => {
-        return {
-          id: hotel.id,
-          name: hotel.name,
-          image: hotel.image,
-        };
-      });
-      const response = await server
-        .get(`/hotels?hotelId=${hotelList.length + 1}`)
-        .set("Authorization", `Bearer ${token}`);
+
+      const response = await server.get(`/hotels?hotelId=${-1}`).set("Authorization", `Bearer ${token}`);
 
       expect(response.status).toEqual(httpStatus.NOT_FOUND);
     });
@@ -120,14 +113,18 @@ describe("GET /hotels?hotelId", () => {
       const response = await server.get(`/hotels?hotelId=${hotel.id}`).set("Authorization", `Bearer ${token}`);
 
       expect(response.status).toEqual(httpStatus.OK);
-      expect(response.body).toEqual({
-        id: desiredHotelRoomInfo.id,
-        capacity: desiredHotelRoomInfo.capacity,
-        hotelId: desiredHotelRoomInfo.hotelId,
-        name: desiredHotelRoomInfo.name,
-        createdAt: expect.any(String),
-        updatedAt: expect.any(String),
-      });
+      expect(response.body).toEqual(
+        desiredHotelRoomInfo.map((room) => {
+          return {
+            id: room.id,
+            capacity: room.capacity,
+            hotelId: room.hotelId,
+            name: room.name,
+            createdAt: expect.any(String),
+            updatedAt: expect.any(String),
+          };
+        }),
+      );
     });
   });
 });

@@ -2,11 +2,11 @@ import { prisma } from "@/config";
 import { Hotel, Room } from "@prisma/client";
 
 async function findHotels() {
-  return prisma.hotel.findMany({});
+  return await prisma.hotel.findMany({ include: { Rooms: true } });
 }
 
 async function findHotelRooms(hotelId: number) {
-  return prisma.room.findFirst({
+  return prisma.room.findMany({
     where: {
       hotelId,
     },

@@ -21,7 +21,7 @@ export function createHotelRoomInfo(hotelId: number) {
 }
 
 export function getHotelRoomInfo(hotelId: number) {
-  return prisma.room.findFirst({
+  return prisma.room.findMany({
     where: { hotelId },
   });
 }
