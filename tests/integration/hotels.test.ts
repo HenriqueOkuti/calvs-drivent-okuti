@@ -44,7 +44,8 @@ describe("GET /hotels", () => {
     it("should respond with status 200 and with disponible hotels", async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
-      await createHotel();
+      await createHotel(); //Create two hotels
+      await createHotel(); //for array verification
       const insertedHotelList = await getHotelList();
 
       const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
