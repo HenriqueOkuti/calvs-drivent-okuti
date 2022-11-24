@@ -10,7 +10,7 @@ export async function createHotel() {
   });
 }
 
-export function createHotelRoomInfo(hotelId: number) {
+export async function createHotelRoomInfo(hotelId: number) {
   return prisma.room.create({
     data: {
       name: faker.name.findName(),
@@ -20,12 +20,23 @@ export function createHotelRoomInfo(hotelId: number) {
   });
 }
 
-export function getHotelRoomInfo(hotelId: number) {
+export async function getHotelRoomInfo(hotelId: number) {
   return prisma.room.findMany({
     where: { hotelId },
   });
 }
 
-export function getHotelList() {
+export async function getHotelList() {
   return prisma.hotel.findMany({});
+}
+
+export async function createTicketTypeWithInfo(isRemote: boolean, includesHotel: boolean) {
+  return prisma.ticketType.create({
+    data: {
+      name: faker.name.findName(),
+      price: faker.datatype.number(),
+      isRemote: isRemote,
+      includesHotel: includesHotel,
+    },
+  });
 }
