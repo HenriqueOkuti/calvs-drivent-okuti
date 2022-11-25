@@ -23,7 +23,7 @@ async function getHotels() {
 
 async function getHotelRooms(hotelId: number) {
   const rooms = await hotelsRepository.findHotelRooms(hotelId);
-  if (!rooms || !rooms[0]) {
+  if (!rooms) {
     throw notFoundError();
   }
   return rooms;
