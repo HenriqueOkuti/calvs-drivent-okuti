@@ -21,8 +21,9 @@ export async function createHotelRoomInfo(hotelId: number) {
 }
 
 export async function getHotelRoomInfo(hotelId: number) {
-  return prisma.room.findMany({
-    where: { hotelId },
+  return prisma.hotel.findMany({
+    where: { id: hotelId },
+    include: { Rooms: true },
   });
 }
 
