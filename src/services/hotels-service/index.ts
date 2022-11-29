@@ -1,63 +1,43 @@
-import { invalidDataError, notFoundError } from "@/errors";
-import hotelsRepository from "@/repositories/hotels-repository";
+import hotelRepository from "@/repositories/hotel-repository";
+import enrollmentRepository from "@/repositories/enrollment-repository";
+import ticketRepository from "@/repositories/ticket-repository";
+import { notFoundError } from "@/errors";
+import { cannotListHotelsError } from "@/errors/cannot-list-hotels-error";
 
-async function getHotels() {
-  const hotels = await hotelsRepository.findHotels();
-  if (!hotels) {
-    throw notFoundError();
-  }
-
-  const hotelsWithCapacity = hotels.map((hotel) => {
-    return {
-      id: hotel.id,
-      name: hotel.name,
-      image: hotel.image,
-      totalCapacity: hotel.Rooms.reduce((prev, curr) => prev + curr.capacity, 0),
-      createdAt: hotel.createdAt,
-      updatedAt: hotel.updatedAt,
-    };
-  });
-
-  return hotelsWithCapacity;
-}
-
-async function getHotelRooms(hotelId: number) {
-  const rooms = await hotelsRepository.findHotelRooms(hotelId);
-  if (!rooms) {
-    throw notFoundError();
-  }
-  return rooms;
-}
-
-async function isUserAbleToChooseHotel(userId: number) {
-  const enrollment = await hotelsRepository.findEnrollmentWithUserId(userId);
+async function listHotels(userId: number) {
+  //Tem enrollment?
+  const enrollment = await enrollmentRepository.findWithAddressByUserId(userId);
   if (!enrollment) {
-    throw invalidDataError(["User has no enrollment"]);
+    throw notFoundError();
   }
-  const ticketInfo = await hotelsRepository.findTicketWithInfo(enrollment.id);
+  //Tem ticket pago isOnline false e includesHotel true
+  const ticket = await ticketRepository.findTicketByEnrollmentId(enrollment.id);
 
-  if (!ticketInfo) {
-    throw invalidDataError(["User has no ticket"]);
+  if (!ticket || ticket.status === "RESERVED" || ticket.TicketType.isRemote || !ticket.TicketType.includesHotel) {
+    throw cannotListHotelsError();
   }
-
-  if (isTicketInfoInvalid(ticketInfo.TicketType.isRemote, ticketInfo.TicketType.includesHotel, ticketInfo.status)) {
-    throw invalidDataError(["Ticket info does not allow hotel access"]);
-  }
-
-  return;
 }
 
-function isTicketInfoInvalid(isRemote: boolean, includesHotel: boolean, status: string): boolean {
-  if (isRemote || !includesHotel || status !== "PAID") {
-    return true;
-  }
-  return false;
+async function getHotels(userId: number) {
+  await listHotels(userId);
+
+  const hotels = await hotelRepository.findHotels();
+  return hotels;
 }
 
-const hotelsService = {
+async function getHotelsWithRooms(userId: number, hotelId: number) {
+  await listHotels(userId);
+  const hotel = await hotelRepository.findRoomsByHotelId(hotelId);
+
+  if (!hotel) {
+    throw notFoundError();
+  }
+  return hotel;
+}
+
+const hotelService = {
   getHotels,
-  getHotelRooms,
-  isUserAbleToChooseHotel,
+  getHotelsWithRooms,
 };
 
-export default hotelsService;
+export default hotelService;
