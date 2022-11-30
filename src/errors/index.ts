@@ -5,3 +5,7 @@ export * from "./invalid-email-error";
 export * from "./not-found-error";
 export * from "./unauthorized-error";
 export * from "./request-error";
+export * from "./not-presential-error";
+export * from "./payment-not-found-error";
+export * from "./room-full-error";
+export * from "./invalid-room-error";
