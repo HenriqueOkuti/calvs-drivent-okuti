@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669769751648" clover="3.2.0">
-  <project timestamp="1669769751648" name="All files">
-    <metrics statements="536" coveredstatements="500" conditionals="69" coveredconditionals="46" methods="90" coveredmethods="82" elements="695" coveredelements="628" complexity="0" loc="536" ncloc="536" packages="24" files="60" classes="60"/>
+<coverage generated="1669847005280" clover="3.2.0">
+  <project timestamp="1669847005280" name="All files">
+    <metrics statements="649" coveredstatements="614" conditionals="100" coveredconditionals="75" methods="105" coveredmethods="97" elements="854" coveredelements="786" complexity="0" loc="649" ncloc="649" packages="26" files="67" classes="67"/>
     <package name="src">
       <metrics statements="22" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="app.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/app.ts">
@@ -59,7 +59,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="123" coveredstatements="118" conditionals="14" coveredconditionals="12" methods="13" coveredmethods="13"/>
+      <metrics statements="175" coveredstatements="167" conditionals="26" coveredconditionals="24" methods="17" coveredmethods="17"/>
       <file name="authentication-controller.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="11" type="stmt"/>
@@ -70,6 +70,60 @@
         <line num="8" count="5" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="booking-controller.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/controllers/booking-controller.ts">
+        <metrics statements="51" coveredstatements="48" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="11" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="39" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="11" type="stmt"/>
+        <line num="54" count="9" type="stmt"/>
+        <line num="55" count="9" type="stmt"/>
+        <line num="56" count="9" type="stmt"/>
+        <line num="58" count="9" type="stmt"/>
+        <line num="59" count="9" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="66" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="69" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="72" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="76" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="85" count="22" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/controllers/enrollments-controller.ts">
         <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -129,7 +183,7 @@
         <line num="35" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/controllers/index.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -137,6 +191,7 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="7" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
       </file>
       <file name="payments-controller.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/controllers/payments-controller.ts">
         <metrics statements="28" coveredstatements="26" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
@@ -209,7 +264,7 @@
       </file>
     </package>
     <package name="src.errors">
-      <metrics statements="23" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+      <metrics statements="35" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="10"/>
       <file name="cannot-enroll-before-start-date-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/cannot-enroll-before-start-date-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
@@ -226,7 +281,7 @@
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/index.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -234,6 +289,10 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="7" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
       </file>
       <file name="invalid-data-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/invalid-data-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -245,15 +304,35 @@
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
+      <file name="invalid-room-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/invalid-room-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
       <file name="not-found-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/not-found-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
+        <line num="4" count="18" type="stmt"/>
+      </file>
+      <file name="not-presential-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/not-presential-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+      </file>
+      <file name="payment-not-found-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/payment-not-found-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
       <file name="request-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/request-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="room-full-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/room-full-error.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
       <file name="unauthorized-error.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/errors/unauthorized-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -270,16 +349,16 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="8" count="11" type="stmt"/>
-        <line num="9" count="96" type="stmt"/>
-        <line num="10" count="96" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="84" type="stmt"/>
-        <line num="13" count="84" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="84" type="stmt"/>
-        <line num="16" count="84" type="stmt"/>
-        <line num="18" count="72" type="stmt"/>
-        <line num="23" count="72" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="60" type="stmt"/>
-        <line num="27" count="60" type="stmt"/>
+        <line num="9" count="94" type="stmt"/>
+        <line num="10" count="94" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="82" type="stmt"/>
+        <line num="13" count="82" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="82" type="stmt"/>
+        <line num="16" count="82" type="stmt"/>
+        <line num="18" count="70" type="stmt"/>
+        <line num="23" count="70" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="58" type="stmt"/>
+        <line num="27" count="58" type="stmt"/>
         <line num="29" count="12" type="stmt"/>
         <line num="34" count="36" type="stmt"/>
       </file>
@@ -331,12 +410,26 @@
         <line num="24" count="11" type="stmt"/>
       </file>
     </package>
+    <package name="src.repositories.booking-repository">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="index.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/repositories/booking-repository/index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="41" count="11" type="stmt"/>
+      </file>
+    </package>
     <package name="src.repositories.enrollment-repository">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/repositories/enrollment-repository/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="11" type="stmt"/>
-        <line num="5" count="17" type="stmt"/>
+        <line num="5" count="39" type="stmt"/>
         <line num="14" count="6" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
@@ -394,7 +487,7 @@
         <line num="5" count="2" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
         <line num="19" count="3" type="stmt"/>
-        <line num="30" count="11" type="stmt"/>
+        <line num="30" count="30" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
         <line num="49" count="3" type="stmt"/>
         <line num="61" count="11" type="stmt"/>
@@ -416,7 +509,7 @@
       </file>
     </package>
     <package name="src.routers">
-      <metrics statements="60" coveredstatements="60" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="58" coveredstatements="58" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="authentication-router.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/routers/authentication-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
@@ -428,15 +521,13 @@
         <line num="10" count="11" type="stmt"/>
       </file>
       <file name="booking-router.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/routers/booking-router.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
         <line num="5" count="11" type="stmt"/>
         <line num="7" count="11" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="16" count="10" type="stmt"/>
-        <line num="19" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
       </file>
       <file name="enrollments-router.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/routers/enrollments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -547,14 +638,15 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/services/index.ts">
-        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services.authentication-service">
@@ -588,6 +680,54 @@
         <line num="55" count="11" type="stmt"/>
         <line num="59" count="11" type="stmt"/>
         <line num="60" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.booking-service">
+      <metrics statements="42" coveredstatements="41" conditionals="19" coveredconditionals="17" methods="4" coveredmethods="4"/>
+      <file name="index.ts" path="/home/okuti/Documents/DRIVEN/Módulo 5/calvs-drivent/src/services/booking-service/index.ts">
+        <metrics statements="42" coveredstatements="41" conditionals="19" coveredconditionals="17" methods="4" coveredmethods="4"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="8" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="19" type="stmt"/>
+        <line num="13" count="19" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="19" type="cond" truecount="3" falsecount="0"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="21" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="54" count="5" type="stmt"/>
+        <line num="55" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="63" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="68" count="2" type="cond" truecount="2" falsecount="1"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="77" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services.enrollments-service">
