@@ -11,11 +11,7 @@ export function validateParams<T>(schema: ObjectSchema<T>): ValidationMiddleware
   return validate(schema, "params");
 }
 
-export function validateQuery<T>(schema: ObjectSchema<T>): ValidationMiddleware {
-  return validate(schema, "query");
-}
-
-function validate(schema: ObjectSchema, type: "body" | "params" | "query") {
+function validate(schema: ObjectSchema, type: "body" | "params") {
   return (req: Request, res: Response, next: NextFunction) => {
     const { error } = schema.validate(req[type], {
       abortEarly: false,
