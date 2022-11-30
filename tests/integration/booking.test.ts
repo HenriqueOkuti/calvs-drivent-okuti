@@ -466,7 +466,7 @@ describe("PUT /booking", () => {
         const response = await server.put(`/booking/${booking.id}`).set("Authorization", `Bearer ${token}`).send(body);
 
         expect(response.status).toEqual(httpStatus.OK);
-        expect(response.body).toEqual({ bookingId: expect.any(Number) });
+        expect(response.body).toEqual({ bookingId: booking.id });
       });
     });
   });
